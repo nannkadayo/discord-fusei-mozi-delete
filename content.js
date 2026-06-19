@@ -9,9 +9,9 @@
   function TIGHT_SANITIZE(rawText) {
     if (typeof rawText !== 'string') return rawText;
     let temp = rawText;
-    if (regexEscapedLag.test(temp)) temp = temp.replace(regexEscapedLag, 'SafeText');
-    if (temp.match(regexLagChars)) temp = temp.replace(regexLagChars, 'SafeText');
-    if (temp.includes('𩸽')) temp = temp.replaceAll('𩸽', 'SafeText');
+    if (regexEscapedLag.test(temp)) temp = temp.replace(regexEscapedLag, 'A');
+    if (temp.match(regexLagChars)) temp = temp.replace(regexLagChars, 'A');
+    if (temp.includes('𩸽')) temp = temp.replaceAll('𩸽', 'A');
     return temp;
   }
 
