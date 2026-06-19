@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Discord ラグサーバー避難シールド",
+  "version": "1.0",
+  "description": "Discordの通信からアプリをクラッシュさせる不正な文字を自動的に除去します。",
+  "permissions": [],
+  "content_scripts": [
+    {
+      "matches": ["https://discord.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "discord-shield@yourdomain.local"
+    }
+  }
+}
